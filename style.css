@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    min-height: 100vh;
+    width: 100wh;
+    background-color: #efeae3;
+    position: relative;
+    padding: 0 30px;
+}
+#nav{
+    padding: 2vw 2vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.701);
+    border-radius: 50px;
+    color: rgba(0, 0, 0, 0.615);
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+
+}
+#nav-part2 h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom:-100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+#nav-part2 h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+#nav-part2 h4 a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    z-index: 9;
+}
+#nav-part2 h4:hover a{
+    color: #fff;
+} 
+#center{
+    height: 65vh;
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 2vw;
+}
+#left h3{
+    width: 35vh;
+    font-size: 2.5vh;
+    line-height: 3.2vh;
+    letter-spacing: -0.5px;
+}
+#right h1{
+  font-size: 10vw;
+  line-height: 8vw;
+  font-weight: 600;
+  text-align: end;
+}
+#page1 video{
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+    margin-top: 3vw;
+}
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: 0;
+    top: 73vh;
+}
+
+#hero-1 {
+    background-color: #FE320A;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 8vw 0;
+    position: relative;
+}
+#moving-text h1{
+    font-size: 9vw;
+    display: inline-block;
+}
+#moving-text{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#gola{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2-bottom{
+    height: 80vh;
+    width: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3vw;
+}
+#page2-bottom h1{
+    font-size: 7vh;
+    width: 60%;
+    line-height: 3.8vw;
+    z-index: 9;
+}
+#bottom-part2{
+    width: 20%;
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+}
+#bottom-part2 p{
+    padding-top: 2vh;
+}
+#gooey{
+    height: 32vw;
+    width: 32vw;
+    background: linear-gradient(to top,#FE320A,#ff5c0b);
+    border-radius: 50%;
+    position: absolute;
+    top: 58%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes gooey {
+    from{
+       transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%,10%) skew(-15deg);
+    }
+}
+
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 4vw 0;
+}
+.elem{
+    height: 130px;
+    width: 100%;
+    /* background-color: orange; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(62, 62, 62, 0.61);
+    padding: 0 2vw;
+    overflow: hidden;
+}
+.elem h2{
+    font-size: 3vw;
+    z-index: 9;
+}
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+.elem:hover .overlay{
+    top: 0;
+}
+#fixed-image{
+    height: 30vw;
+    width: 25vw;
+    position: fixed;
+    border-radius: 10px;
+    left: 50%;
+    top: 25%;
+    display: none;
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+}
+#page4{
+    height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+    padding: 1vw 3vw;
+    display: flex;
+    
+}
+#page-left{
+    height: 100%;
+    width: 40vw;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+}
+#page-right{
+    height: 100%;
+    width: 50vw;
+    background-color: red;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url(./coverse.webp);
+    background-size: cover;
+    background-position: center;
+}
+#page-left h1{
+    font-size: 4.5vw;
+    line-height: 7vh;
+    position: relative;
+    left: 10vw;
+    top: 10vw;
+}
+#page-left span{
+    opacity: 0.3;
+}
+#page-left p{
+    width: 20vw;
+    position: relative;
+    top: 15vw;
+    left: 10vw;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+#main{
+    position: relative;
+    z-index: 10;
+}
+#footer{
+    height: 100vh;
+    position: fixed;
+    color: white;
+    width: 100%;
+    background-color: black;
+    z-index: 9;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    
+}
+#footer h1{
+    font-size: 23vw;
+    bottom: -7%;
+    position: relative;
+}
+#footer-div{
+    height: 20vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+#footer-left h2{
+    line-height: 3.5vh;
+    font-size: 3vw;
+    z-index: 9;
+}
+#footer-right h3{
+    font-weight: 400;
+    z-index: 9;
+}
+#footer-bottom{
+    height: 10vh;
+    width: 100%;
+    /* background-color: red; */
+    border-top: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+#footer-bottom h3{
+    font-weight: 400;
+}
+#niche-gola{
+    height: 80vh;
+    width: 150vw;
+    /* background-color: #FE320A; */
+    filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    top: -130%;
+    left: -30%;
+}
+#niche-gola1{
+    height: 160vh;
+    width: 100vw;
+    background: linear-gradient(#FE320A, #fe3f0a);
+    /* border-radius: 50%; */
+    border-bottom-right-radius: 50%;
+    filter: blur(100px);
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anime {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(5%,5%);
+    }
+}
+#niche-gola2{
+    height: 160vh;
+    width: 100vw;
+    background: linear-gradient(#FE320A, #fe3f0a);
+    border-bottom-left-radius: 50%;
+    filter: blur(100px);
+    position: relative;
+    top: 3vw;
+    right: 10vw;
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime2 {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-15%,5%);
+    }
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: all ease 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loader h1{
+    color: transparent;
+    font-size: 4vw;
+    background: linear-gradient(orange,orangered);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
